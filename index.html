@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>기억을 잇다</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+  <div class="logo">기억을 <span>잇다</span></div>
+
+  <nav>
+    <button onclick="goTo('home')">HOME</button>
+    <button onclick="goTo('research')">RESEARCH</button>
+    <button onclick="goTo('memory')">MEMORY</button>
+    <button onclick="goTo('archive')">ARCHIVE</button>
+  </nav>
+</header>
+
+<main>
+
+<section id="home" class="home">
+  <div class="home-content">
+    <p class="eyebrow">MEMORY CONNECT</p>
+
+    <h1>
+      기억을 돌아보고,<br>
+      <span>나를 발견하다.</span>
+    </h1>
+
+    <p class="intro">
+      소중했던 순간을 천천히 떠올리고<br>
+      서로의 기억을 만나보세요.
+    </p>
+
+    <div class="home-buttons">
+      <button class="primary" onclick="goTo('memory')">
+        나의 기억 남기기
+      </button>
+
+      <button class="secondary" onclick="goTo('archive')">
+        우리의 기억 보기
+      </button>
+    </div>
+  </div>
+
+  <div class="memory-circle">
+    <small>OUR</small>
+    <strong>MEMORY</strong>
+    <small>기억을 잇다</small>
+  </div>
+</section>
+
+
+<section id="research" class="research">
+  <div class="section-inner">
+
+    <p class="eyebrow">RESEARCH</p>
+
+    <h2>기억과 감정<br>알아보기</h2>
+
+    <div class="research-grid">
+
+      <article>
+        <span>01</span>
+        <h3>노스탤지어와 과거 기억</h3>
+        <p>
+          사람들은 노스탤지어를 불러일으키는
+          과거의 기억 속에서 대부분 자기 자신을
+          주인공으로 인식합니다.
+        </p>
+      </article>
+
+      <article>
+        <span>02</span>
+        <h3>기억을 회상할 때 나타나는 감정</h3>
+        <p>
+          노스탤지어는 긍정적 정서와 부정적 정서를
+          모두 포함하는 복합적인 정서입니다.
+          행복과 따뜻함뿐 아니라 슬픔과 그리움도
+          함께 나타날 수 있습니다.
+        </p>
+      </article>
+
+      <article class="wide">
+        <span>03</span>
+        <h3>노스탤지어의 긍정적 기능</h3>
+        <p>
+          노스탤지어는 긍정적 자존감,
+          긍정적 정서 및 삶의 목적,
+          사회적 연대성, 삶의 의미와 관련됩니다.
+        </p>
+
+        <div class="tags">
+          <span>긍정적 자존감</span>
+          <span>긍정적 정서</span>
+          <span>삶의 목적</span>
+          <span>사회적 연대성</span>
+          <span>삶의 의미</span>
+        </div>
+      </article>
+
+      <article>
+        <span>04</span>
+        <h3>노스탤지어를 불러오는 상황</h3>
+        <p>
+          익숙하거나 낯익은 사건,
+          혼자 조용히 있는 상황,
+          특정 환경과 감각 자극 등이
+          기억을 불러일으킬 수 있습니다.
+        </p>
+      </article>
+
+      <article>
+        <span>05</span>
+        <h3>기억의 중심에는 사람</h3>
+        <p>
+          노스탤지어 경험의 중심에는 주로 사람이
+          자리합니다. 이는 노스탤지어가 타인과의
+          관계를 기반으로 하는 사회적 정서임을
+          보여줍니다.
+        </p>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+
+<section id="memory" class="memory-section">
+
+  <div class="memory-heading">
+    <p class="eyebrow">MEMORY ACTIVITY</p>
+
+    <h2>
+      나의 기억을<br>
+      천천히 돌아보세요.
+    </h2>
+
+    <p>
+      정답은 없습니다.<br>
+      떠오르는 기억을 편하게 적어주세요.
+    </p>
+  </div>
+
+
+  <div class="memory-box">
+
+    <div class="question active" data-step="1">
+      <div class="step">STEP 01 · 1 / 4</div>
+
+      <h3>
+        나를 행복하게 했던<br>
+        기억은 무엇인가요?
+      </h3>
+
+      <p>특정한 날이나 순간, 사람이 떠오르나요?</p>
+
+      <textarea
+        id="memoryText"
+        placeholder="나의 기억을 자유롭게 적어주세요."
+      ></textarea>
+    </div>
+
+
+    <div class="question" data-step="2">
+      <div class="step">STEP 02 · 2 / 4</div>
+
+      <h3>
+        그때 어떤<br>
+        감정을 느꼈나요?
+      </h3>
+
+      <p>가장 가까운 감정을 골라주세요.</p>
+
+      <div class="choices">
+        <button data-type="emotion" data-value="행복">😊 행복</button>
+        <button data-type="emotion" data-value="고마움">💛 고마움</button>
+        <button data-type="emotion" data-value="뿌듯함">🌿 뿌듯함</button>
+        <button data-type="emotion" data-value="따뜻함">☁️ 따뜻함</button>
+        <button data-type="emotion" data-value="설렘">✨ 설렘</button>
+        <button data-type="emotion" data-value="그리움">🌙 그리움</button>
+      </div>
+    </div>
+
+
+    <div class="question" data-step="3">
+      <div class="step">STEP 03 · 3 / 4</div>
+
+      <h3>
+        지금 그 기억을<br>
+        떠올리면 어떤 기분인가요?
+      </h3>
+
+      <p>지금 느껴지는 감정을 골라주세요.</p>
+
+      <div class="choices">
+        <button data-type="feeling" data-value="따뜻해요">🤍 따뜻해요</button>
+        <button data-type="feeling" data-value="행복해요">😊 행복해요</button>
+        <button data-type="feeling" data-value="편안해요">🌿 편안해요</button>
+        <button data-type="feeling" data-value="그리워요">🌙 그리워요</button>
+        <button data-type="feeling" data-value="고마워요">💛 고마워요</button>
+        <button data-type="feeling" data-value="복잡한 마음">☁️ 복잡한 마음</button>
+      </div>
+    </div>
+
+
+    <div class="question" data-step="4">
+      <div class="step">STEP 04 · 4 / 4</div>
+
+      <h3>
+        그 경험을 통해<br>
+        발견한 나의 모습은?
+      </h3>
+
+      <p>
+        그 기억이 지금의 나에게 알려준 것은 무엇인가요?
+      </p>
+
+      <textarea
+        id="reflectionText"
+        placeholder="나의 생각을 자유롭게 적어주세요."
+      ></textarea>
+
+      <p class="category-title">기억의 종류를 골라주세요.</p>
+
+      <div class="choices">
+        <button data-type="category" data-value="우정">🫂 우정</button>
+        <button data-type="category" data-value="가족">🏠 가족</button>
+        <button data-type="category" data-value="성취">🏆 성취</button>
+        <button data-type="category" data-value="위로">🤍 위로</button>
+        <button data-type="category" data-value="성장">🌱 성장</button>
+        <button data-type="category" data-value="감사">💌 감사</button>
+      </div>
+    </div>
+
+
+    <div class="memory-navigation">
+
+      <button
+        id="prevButton"
+        class="nav-button previous"
+        type="button"
+      >
+        ← 이전
+      </button>
+
+      <div class="progress-dots">
+        <i></i>
+        <i></i>
+        <i></i>
+        <i></i>
+      </div>
+
+      <button
+        id="nextButton"
+        class="nav-button next"
+        type="button"
+      >
+        다음 →
+      </button>
+
+      <button
+        id="saveButton"
+        class="nav-button save"
+        type="button"
+      >
+        기억 남기기
+      </button>
+
+    </div>
+
+    <button
+      id="resetButton"
+      class="reset-button"
+      type="button"
+    >
+      ↻ 작성 내용 초기화
+    </button>
+
+  </div>
+</section>
+
+
+<section id="archive" class="archive">
+  <div class="section-inner">
+
+    <p class="eyebrow">OUR ARCHIVE</p>
+
+    <h2>우리의 기억</h2>
+
+    <p class="archive-description">
+      학생들이 남긴 기억을 익명으로 만나보세요.
+    </p>
+
+    <div class="archive-top">
+      <div>
+        <strong id="memoryCount">0</strong>
+        <span>개의 기억</span>
+      </div>
+
+      <span class="live">● LIVE</span>
+    </div>
+
+
+    <div class="filters">
+      <button class="filter active" data-filter="전체">전체</button>
+      <button class="filter" data-filter="우정">우정</button>
+      <button class="filter" data-filter="가족">가족</button>
+      <button class="filter" data-filter="성취">성취</button>
+      <button class="filter" data-filter="위로">위로</button>
+      <button class="filter" data-filter="성장">성장</button>
+      <button class="filter" data-filter="감사">감사</button>
+    </div>
+
+    <div id="memoryList" class="memory-list"></div>
+
+  </div>
+</section>
+
+
+<section class="empathy">
+  <div>
+
+    <p class="eyebrow">EMPATHY</p>
+
+    <h2>
+      기억으로<br>
+      서로 연결되기
+    </h2>
+
+    <p>
+      다른 사람의 기억을 읽고
+      따뜻한 마음을 남겨보세요.
+    </p>
+
+    <button onclick="sendReaction('따뜻한 마음')">
+      🤍 따뜻했어요
+    </button>
+
+    <button onclick="sendReaction('공감')">
+      🌱 나도 비슷한 경험이 있어요
+    </button>
+
+    <button onclick="sendReaction('응원')">
+      💌 응원하고 싶어요
+    </button>
+
+  </div>
+</section>
+
+
+<section class="ending">
+  <p class="eyebrow">REMEMBER</p>
+
+  <h2>
+    한 사람의 기억이<br>
+    또 다른 사람에게 위로가 되고,
+  </h2>
+
+  <p>
+    자신의 소중함을 발견하는 계기가 될 수 있도록.
+  </p>
+</section>
+
+</main>
+
+
+<footer>
+  <span>기억을 잇다</span>
+  <span>MEMORY CONNECT</span>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="script.js"></script>
+
+</body>
+</html>
